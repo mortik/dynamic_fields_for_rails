@@ -1,5 +1,5 @@
 # encoding: utf-8
-module DynamicFormForHelper
+module DynamicFieldsForHelper
 
   def link_to_add_fields(form, association, name=nil, &block)
     new_object = form.object.send(association).klass.new
