@@ -53,7 +53,7 @@ Put this in your Form and replace the {nested_resource} and {resource} tags with
 = link_to_add_fields form, :{nested_resource}s, "Add Entry"
 ```
 
-To add custom css classes to the add and delete buttons just add an initializer called "dynamic_fields_for_rails.rb" and paste in the following and add your custom classes:
+To add custom css classes to the add and delete buttons just add an initializer called "dynamic_fields_for_rails.rb" and paste in the following to add your custom classes:
 
 ```
 # encoding: utf-8
