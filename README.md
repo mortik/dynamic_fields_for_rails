@@ -53,6 +53,17 @@ Put this in your Form and replace the {nested_resource} and {resource} tags with
 = link_to_add_fields form, :{nested_resource}s, "Add Entry"
 ```
 
+To add custom css classes to the add and delete buttons just add an initializer called "dynamic_fields_for_rails.rb" and paste in the following and add your custom classes:
+
+```
+# encoding: utf-8
+
+DynamicFieldsForRails.setup do |config|
+	config.delete_css_classes = ""
+	config.add_css_classes = ""
+end
+```
+
 ## Contributing
 
 1. Fork it
@@ -60,7 +71,3 @@ Put this in your Form and replace the {nested_resource} and {resource} tags with
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
-## TODOs
-
-- Write Tests
