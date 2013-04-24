@@ -59,8 +59,8 @@ To add custom css classes to the add and delete buttons just add an initializer 
 # encoding: utf-8
 
 DynamicFieldsForRails.setup do |config|
-	config.delete_css_classes = ""
-	config.add_css_classes = ""
+  config.delete_css_classes = ""
+  config.add_css_classes = ""
 end
 ```
 
