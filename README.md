@@ -1,6 +1,7 @@
 # DynamicFieldsForRails
 [![Build Status](https://travis-ci.org/mortik/dynamic_fields_for_rails.png?branch=master)](https://travis-ci.org/mortik/dynamic_fields_for_rails)
 [![Gem Version](https://badge.fury.io/rb/dynamic_fields_for_rails.png)](http://badge.fury.io/rb/dynamic_fields_for_rails)
+[![Dependency Status](https://gemnasium.com/mortik/dynamic_fields_for_rails.png)](https://gemnasium.com/mortik/dynamic_fields_for_rails)
 
 Dynamic fields helper for Rails.
 
