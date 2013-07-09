@@ -37,13 +37,14 @@ Create a partial for your nested resource called "_{nested_resoure}_fields.haml"
 Add to the partial only the fields you want to edit like this:
 
 ```
-= fields.label :field1
-= fields.text_field :field1
-
-= fields.label :field2
-= fields.text_field :field2
-
-= link_to_delete_fields fields, "Delete"
+.fields
+  = fields.label :field1
+  = fields.text_field :field1
+  
+  = fields.label :field2
+  = fields.text_field :field2
+  
+  = link_to_delete_fields fields, "Delete"
 ```
 
 The "link_to_delete_fields" helper is a easy way to make the nested fields deletable. You can put whatever divs/fieldsets etc. around those fields to style them.
