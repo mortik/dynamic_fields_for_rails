@@ -16,12 +16,12 @@ class LinkToAddFieldsTest < ActionView::TestCase
 
 	test "generates a add fields link" do
 		form_for(@parent, url: '/') do |form|
-			link_to_add_fields(form, 'children', "Test")
+			link_to_add_fields(form, 'children', name: "Test")
 		end
 
 		assert_match /<a(.*)class=\"add_fields(.*)\"(.*)>Test<\/a>/, @output_buffer
 	end
-	
+
 	test "generates a add fields link with block if it is given" do
 		form_for(@parent, url: '/') do |form|
 			link_to_add_fields form, 'children' do
