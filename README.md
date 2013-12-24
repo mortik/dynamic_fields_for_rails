@@ -54,16 +54,25 @@ Put this in your Form and replace the {nested_resource} and {resource} tags with
 ```
 = form.fields_for :{nested_resource}s, {resource}.{nested_resource}s do |builder|
   = render '{nested_resource}_fields', fields: builder
-= link_to_add_fields form, :{nested_resource}s, "Add Entry"
+= link_to_add_fields form, :{nested_resource}s, name: "Add Entry"
 ```
 
 You can pass a css classes string as an optional fourth parameter to the link helper methods
 ```
-= link_to_add_fields form, :{nested_resource}s, {title}, {css_classes}
+= link_to_add_fields form, :{nested_resource}s, {options}
 ```
+options:
+```
+{name: "", class: "", partial: ""}
+```
+
 and
 ```
-= link_to_delete_fields fields, {title}, {css_classes}
+= link_to_delete_fields fields, {options}
+```
+options:
+```
+{name: "", class: ""}
 ```
 
 To add global custom css classes to the add and delete buttons just add an initializer called "dynamic_fields_for_rails.rb" and paste in the following to add your custom global classes:
