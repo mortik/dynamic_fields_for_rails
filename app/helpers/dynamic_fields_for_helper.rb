@@ -1,11 +1,19 @@
 # encoding: utf-8
 module DynamicFieldsForHelper
 
-  def link_to_add_fields(form, association, name=nil, css_classes=nil, &block)
+  def link_to_add_fields(form, association, options, &block)
+    partial = options[:partial] || nil
+    name = options[:name] || nil
+    css_classes = options[:class] || nil
+
     new_object = form.object.send(association).klass.new
     id = new_object.object_id
     fields = form.fields_for(association, new_object, child_index: id) do |builder|
-      render("#{form.object.class.name.downcase.pluralize}/#{association.to_s.singularize}_fields", fields: builder)
+      if partial
+        render("#{form.object.class.name.downcase.pluralize}/#{partial}", fields: builder)
+      else
+        render("#{form.object.class.name.downcase.pluralize}/#{association.to_s.singularize}_fields", fields: builder)
+      end
     end
     css_classes = css_classes(DynamicFieldsForRails.add_css_classes, css_classes)
     if block_given?
