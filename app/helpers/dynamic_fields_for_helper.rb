@@ -1,7 +1,7 @@
 # encoding: utf-8
 module DynamicFieldsForHelper
 
-  def link_to_add_fields(form, association, options, &block)
+  def link_to_add_fields(form, association, options = {}, &block)
     partial = options[:partial] || nil
     name = options[:name] || nil
     css_classes = options[:class] || nil
@@ -23,7 +23,10 @@ module DynamicFieldsForHelper
   	end
   end
 
-  def link_to_delete_fields(fields, name=nil, css_classes=nil, &block)
+  def link_to_delete_fields(fields, options = {}, &block)
+    name = options[:name] || nil
+    css_classes = options[:class] || nil
+
     link = []
     link << fields.hidden_field(:_destroy)
     css_classes = css_classes(DynamicFieldsForRails.delete_css_classes, css_classes)
