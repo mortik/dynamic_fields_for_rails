@@ -11,6 +11,11 @@ $ ->
   $(document).on 'click', 'form .add_fields', (event) ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
-    $(this).before($(this).data('fields').replace(regexp, time))
+    $target = $($(@).data('target'))
+    fields = $(this).data('fields').replace(regexp, time)
+    if $target.length
+      $target.append(fields)
+    else
+      $(this).before(fields)
     $(document).trigger('dynamicFieldsFor.add', @)
     event.preventDefault()
