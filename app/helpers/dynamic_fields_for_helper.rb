@@ -5,6 +5,7 @@ module DynamicFieldsForHelper
     partial = options[:partial] || nil
     name = options[:name] || nil
     css_classes = options[:class] || nil
+    target = options[:target] || nil
 
     new_object = form.object.send(association).klass.new
     id = new_object.object_id
@@ -17,9 +18,9 @@ module DynamicFieldsForHelper
     end
     css_classes = css_classes(DynamicFieldsForRails.add_css_classes, css_classes)
     if block_given?
-    	link_to('#', class: css_classes, data: {id: id, fields: fields.gsub("\n", "")}, &block)
+    	link_to('#', class: css_classes, data: {id: id, fields: fields.gsub("\n", ""), target: target}, &block)
     else
-    	link_to(name, '#', class: css_classes, data: {id: id, fields: fields.gsub("\n", "")})
+    	link_to(name, '#', class: css_classes, data: {id: id, fields: fields.gsub("\n", ""), target: target})
   	end
   end
 

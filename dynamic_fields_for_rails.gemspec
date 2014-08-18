@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "mocha"
   spec.add_development_dependency "sqlite3"
 
-  spec.add_dependency "rails", ">= 3.2.13"
+  spec.add_dependency "rails", '>= 3.0.0', '< 5.0'
 end
