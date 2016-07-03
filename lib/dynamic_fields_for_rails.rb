@@ -1,7 +1,7 @@
 require "dynamic_fields_for_rails/version"
 
 module DynamicFieldsForRails
-	class Engine < Rails::Engine
+  class Engine < Rails::Engine
   end
 
   mattr_accessor :add_css_classes

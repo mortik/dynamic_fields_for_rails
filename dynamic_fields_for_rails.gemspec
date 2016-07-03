@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.version       = DynamicFieldsForRails::VERSION
   spec.authors       = ["Marten Klitzke"]
   spec.email         = ["m.klitzke@gmail.com"]
-  spec.description   = %q{Dynamic fields helper for Rails.}
-  spec.summary       = %q{Helper for nested forms with dynamic fields.}
+  spec.description   = 'Dynamic fields helper for Rails.'
+  spec.summary       = 'Helper for nested forms with dynamic fields.'
   spec.homepage      = "https://github.com/mortik/dynamic_fields_for_rails"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]

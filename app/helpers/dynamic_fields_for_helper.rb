@@ -1,6 +1,5 @@
 # encoding: utf-8
 module DynamicFieldsForHelper
-
   def link_to_add_fields(form, association, options = {}, &block)
     partial = options[:partial] || nil
     name = options[:name] || nil
@@ -18,10 +17,10 @@ module DynamicFieldsForHelper
     end
     css_classes = css_classes(DynamicFieldsForRails.add_css_classes, css_classes)
     if block_given?
-    	link_to('#', class: css_classes, data: {id: id, fields: fields.gsub("\n", ""), target: target}, &block)
+      link_to('#', class: css_classes, data: { id: id, fields: fields.delete("\n"), target: target }, &block)
     else
-    	link_to(name, '#', class: css_classes, data: {id: id, fields: fields.gsub("\n", ""), target: target})
-  	end
+      link_to(name, '#', class: css_classes, data: { id: id, fields: fields.delete("\n"), target: target })
+    end
   end
 
   def link_to_delete_fields(fields, options = {}, &block)
@@ -29,14 +28,14 @@ module DynamicFieldsForHelper
     css_classes = options[:class] || nil
 
     link = []
-    link << fields.hidden_field(:_destroy)
+    link << fields.hidden_field(:_destroy) unless fields.object.new_record?
     css_classes = css_classes(DynamicFieldsForRails.delete_css_classes, css_classes)
-    if block_given?
-      link << link_to('#', class: css_classes, title: name, &block)
-    else
-      link << link_to(name, '#', class: css_classes)
-    end
-    return link.join('').html_safe
+    link << if block_given?
+              link_to('#', class: css_classes, title: name, &block)
+            else
+              link_to(name, '#', class: css_classes)
+            end
+    link.join('').html_safe
   end
 
   protected
