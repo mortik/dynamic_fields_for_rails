@@ -1,5 +1,0 @@
-language: ruby
-rvm:
-  - 2.1.0
-notifications:
-  webhooks: https://mortik.slack.com/services/hooks/travis?token=aqp1ZDxk4YATzbB2XC8b36kn
