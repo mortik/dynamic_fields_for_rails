@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'bundler/setup'
 
 ENV['RAILS_ENV'] = 'test'
-require File.expand_path('../dummy/config/environment.rb', __FILE__)
-require "rails/test_help"
-require "mocha/setup"
-require "active_support/test_case"
-require "active_support/inflector"
+require File.expand_path('dummy/config/environment.rb', __dir__)
+require 'rails/test_help'
+require 'mocha/setup'
+require 'active_support/test_case'
+require 'active_support/inflector'
 
 Rails.backtrace_cleaner.remove_silencers!
 

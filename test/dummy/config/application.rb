@@ -1,9 +1,11 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
 
-require "rails/all"
+require File.expand_path('boot', __dir__)
+
+require 'rails/all'
 
 Bundler.require
-require "dynamic_fields_for_rails"
+require 'dynamic_fields_for_rails'
 
 module Dummy
   class Application < Rails::Application
@@ -33,9 +35,11 @@ module Dummy
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = 'utf-8'
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end

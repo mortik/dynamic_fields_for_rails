@@ -1,2 +1,4 @@
-class Child < ActiveRecord::Base
+# frozen_string_literal: true
+
+class Child < ApplicationRecord
 end

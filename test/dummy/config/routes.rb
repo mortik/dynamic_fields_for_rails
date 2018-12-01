@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Dummy::Application.routes.draw do
   resources :parents
   # The priority is based upon order of creation:

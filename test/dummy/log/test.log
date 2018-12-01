@@ -1351,3 +1351,697 @@ LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36mChild Load (0.1ms)[0m  [1mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
   [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (1.6ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:20:55.953190"], ["updated_at", "2018-12-01 10:20:55.953190"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.5ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:20:55.988165"], ["updated_at", "2018-12-01 10:20:55.988165"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:20:55.993043"], ["updated_at", "2018-12-01 10:20:55.993043"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (3.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:20:56.043784"], ["updated_at", "2018-12-01 10:20:56.043784"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:21:48.646223"], ["updated_at", "2018-12-01 10:21:48.646223"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:21:48.679544"], ["updated_at", "2018-12-01 10:21:48.679544"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:21:48.686291"], ["updated_at", "2018-12-01 10:21:48.686291"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.5ms)
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:21:48.744587"], ["updated_at", "2018-12-01 10:21:48.744587"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:27:52.077576"], ["updated_at", "2018-12-01 10:27:52.077576"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:27:52.145128"], ["updated_at", "2018-12-01 10:27:52.145128"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.1ms)
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:27:52.153051"], ["updated_at", "2018-12-01 10:27:52.153051"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:27:52.172806"], ["updated_at", "2018-12-01 10:27:52.172806"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:12.775666"], ["updated_at", "2018-12-01 10:28:12.775666"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:12.817983"], ["updated_at", "2018-12-01 10:28:12.817983"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:12.837244"], ["updated_at", "2018-12-01 10:28:12.837244"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.4ms)
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:12.894515"], ["updated_at", "2018-12-01 10:28:12.894515"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:42.592394"], ["updated_at", "2018-12-01 10:28:42.592394"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:42.655053"], ["updated_at", "2018-12-01 10:28:42.655053"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:42.658547"], ["updated_at", "2018-12-01 10:28:42.658547"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:28:42.673163"], ["updated_at", "2018-12-01 10:28:42.673163"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:29:49.809951"], ["updated_at", "2018-12-01 10:29:49.809951"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:29:49.877814"], ["updated_at", "2018-12-01 10:29:49.877814"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.6ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:29:49.885569"], ["updated_at", "2018-12-01 10:29:49.885569"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:29:49.895037"], ["updated_at", "2018-12-01 10:29:49.895037"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:00.405942"], ["updated_at", "2018-12-01 10:30:00.405942"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:00.480536"], ["updated_at", "2018-12-01 10:30:00.480536"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:00.486877"], ["updated_at", "2018-12-01 10:30:00.486877"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:00.505634"], ["updated_at", "2018-12-01 10:30:00.505634"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.6ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:36.001772"], ["updated_at", "2018-12-01 10:30:36.001772"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:36.069179"], ["updated_at", "2018-12-01 10:30:36.069179"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:36.072999"], ["updated_at", "2018-12-01 10:30:36.072999"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.6ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 10:30:36.086710"], ["updated_at", "2018-12-01 10:30:36.086710"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (1.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:00:06.144064"], ["updated_at", "2018-12-01 13:00:06.144064"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:00:06.207898"], ["updated_at", "2018-12-01 13:00:06.207898"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:00:06.212074"], ["updated_at", "2018-12-01 13:00:06.212074"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.9ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:00:06.220998"], ["updated_at", "2018-12-01 13:00:06.220998"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:02:42.887896"], ["updated_at", "2018-12-01 13:02:42.887896"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:02:42.947395"], ["updated_at", "2018-12-01 13:02:42.947395"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:02:42.951447"], ["updated_at", "2018-12-01 13:02:42.951447"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:02:42.953120"], ["updated_at", "2018-12-01 13:02:42.953120"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:02:42.967492"], ["updated_at", "2018-12-01 13:02:42.967492"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:02:42.969381"], ["updated_at", "2018-12-01 13:02:42.969381"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:17.893259"], ["updated_at", "2018-12-01 13:04:17.893259"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:17.951194"], ["updated_at", "2018-12-01 13:04:17.951194"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:17.956081"], ["updated_at", "2018-12-01 13:04:17.956081"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:17.961591"], ["updated_at", "2018-12-01 13:04:17.961591"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (7.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:27.849531"], ["updated_at", "2018-12-01 13:04:27.849531"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:27.940783"], ["updated_at", "2018-12-01 13:04:27.940783"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:27.945051"], ["updated_at", "2018-12-01 13:04:27.945051"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:04:27.946583"], ["updated_at", "2018-12-01 13:04:27.946583"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:04:27.955848"], ["updated_at", "2018-12-01 13:04:27.955848"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:04:27.957321"], ["updated_at", "2018-12-01 13:04:27.957321"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:13.351543"], ["updated_at", "2018-12-01 13:05:13.351543"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:13.369976"], ["updated_at", "2018-12-01 13:05:13.369976"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.7ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:13.431368"], ["updated_at", "2018-12-01 13:05:13.431368"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:13.504999"], ["updated_at", "2018-12-01 13:05:13.504999"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:44.961747"], ["updated_at", "2018-12-01 13:05:44.961747"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:45.023638"], ["updated_at", "2018-12-01 13:05:45.023638"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:45.027547"], ["updated_at", "2018-12-01 13:05:45.027547"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:05:45.028976"], ["updated_at", "2018-12-01 13:05:45.028976"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.3ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:05:45.038539"], ["updated_at", "2018-12-01 13:05:45.038539"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:05:45.040273"], ["updated_at", "2018-12-01 13:05:45.040273"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_deletes_fields_link_with_block_if_it_is_given
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:06:13.136349"], ["updated_at", "2018-12-01 13:06:13.136349"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.2ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:06:13.164135"], ["updated_at", "2018-12-01 13:06:13.164135"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+LinkToDeleteFieldsTest: test_generates_a_delete_fields_link
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.5ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:06:13.183332"], ["updated_at", "2018-12-01 13:06:13.183332"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mChild Create (0.1ms)[0m  [1m[32mINSERT INTO "children" ("parent_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["parent_id", 1], ["created_at", "2018-12-01 13:06:13.185533"], ["updated_at", "2018-12-01 13:06:13.185533"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."parent_id" = ?[0m  [["parent_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+DynamicFieldsForHelperTest: test_truth
+--------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:06:13.191264"], ["updated_at", "2018-12-01 13:06:13.191264"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.3ms)
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+LinkToAddFieldsTest: test_generates_a_add_fields_link_with_block_if_it_is_given
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mParent Create (0.4ms)[0m  [1m[32mINSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-12-01 13:06:13.240133"], ["updated_at", "2018-12-01 13:06:13.240133"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered parents/_child_fields.html.erb (0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
