@@ -136,10 +136,10 @@ var Effect = {
       speed: 0.1,
       delay: 0.0
     }, arguments[2] || { });
-    var masterDelay = options.delay;
+    var mainDelay = options.delay;
 
     $A(elements).each( function(element, index) {
-      new effect(element, Object.extend(options, { delay: index * options.speed + masterDelay }));
+      new effect(element, Object.extend(options, { delay: index * options.speed + mainDelay }));
     });
   },
   PAIRS: {
